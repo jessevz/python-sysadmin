@@ -1,0 +1,28 @@
+In [1]: import os
+
+In [2]: os.getcwd()
+Out[2]: '/private/tmp'
+
+In [3]: os.mkdir("/tmp/os_mod_explore")
+
+In [4]: os.listdir("/tmp/os_mod_explore")
+Out[4]: []
+
+In [5]: os.mkdir("/tmp/os_mod_explore/test_dir1")
+
+In [6]: os.listdir("/tmp/os_mod_explore")
+Out[6]: ['test_dir1']
+
+In [7]: os.stat("/tmp/os_mod_explore")
+Out[7]: (16877, 6029306L, 234881026L, 3, 501, 0, 102L, 
+1207014425, 1207014398, 1207014398)
+
+In [8]: os.rename("/tmp/os_mod_explore/test_dir1", 
+"/tmp/os_mod_explore/test_dir1_renamed")
+
+In [9]: os.listdir("/tmp/os_mod_explore")
+Out[9]: ['test_dir1_renamed']
+
+In [10]: os.rmdir("/tmp/os_mod_explore/test_dir1_renamed")
+
+In [11]: os.rmdir("/tmp/os_mod_explore/")
